@@ -1,9 +1,7 @@
 name: Fetch Electron Runtime
 
 on:
-  push:
-    paths:
-      - '.github/workflows/fetch-electron.yml'
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -16,7 +14,6 @@ jobs:
           curl -L --fail --retry 5 --retry-delay 2 \
             -o electron-v43.2.0-linux-x64.zip \
             https://github.com/electron/electron/releases/download/v43.2.0/electron-v43.2.0-linux-x64.zip
-          echo 'a2df5f8b93a2df5f8b93a2df5f8b93a2df5f8b93a2df5f8b93a2df5f8b93a2  electron-v43.2.0-linux-x64.zip' > EXPECTED_PLACEHOLDER.txt
           sha256sum electron-v43.2.0-linux-x64.zip > electron-v43.2.0-linux-x64.zip.sha256
       - name: Upload runtime artifact
         uses: actions/upload-artifact@v4
