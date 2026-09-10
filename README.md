@@ -8,11 +8,11 @@ My strongest work is not only the software I built. It is the progression in how
 
 ## Featured work
 
-### [Temporal Forge Player](https://github.com/Rolaand-Jayz/temporal_forge_player)
+### [Temporal Forge Player](https://github.com/Rolaand-Jayz/Temporal-Forge-Player)
 
 Flagship experimental R&D adapting **AMD FSR 4.1-style temporal reconstruction/upscaling to ordinary decoded video** while preserving the original frame cadence. The project investigates which renderer-derived temporal signals can be recovered from finished video, which must be synthesized, which cannot be trusted, and which inputs actually change reconstruction behavior.
 
-[Explore the repository →](https://github.com/Rolaand-Jayz/temporal_forge_player)
+[Explore the repository →](https://github.com/Rolaand-Jayz/Temporal-Forge-Player)
 
 ### [AMD-VE](https://github.com/Rolaand-Jayz/AMD-VE)
 
