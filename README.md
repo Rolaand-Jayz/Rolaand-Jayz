@@ -48,5 +48,5 @@ AI assistance expands the range of problems I can attack. It does not replace re
 Enterprise IT/service-desk troubleshooting, Linux and hardware, cloud infrastructure, C++, JavaScript/Node, Python, GPU/video systems, technical research, and self-directed software engineering.
 
 Certifications: CompTIA A+, Microsoft Azure Fundamentals (AZ-900), Microsoft Azure AI Fundamentals (AI-900), and Linux Essentials.
-
-[LinkedIn](https://www.linkedin.com/in/rolaand-jayz) · [GitHub](https://github.com/Rolaand-Jayz)
+ 
+[GitHub](https://github.com/Rolaand-Jayz)
