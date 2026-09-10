@@ -26,12 +26,6 @@ Evidence-driven reverse engineering of AMD FSR 4.1’s neural temporal upscaler:
 
 [Explore the repository →](https://github.com/Rolaand-Jayz/RE-of-FSR-4.1.0-Upscaling)
 
-### [MY PLAITHROUGH](https://github.com/Rolaand-Jayz/MY-PLAITHROUGH)
-
-Local-first AI application combining ChatGPT interaction, persistent evidence-backed guide state, bounded hosted integration, source management, workflow/session design, and human-controlled guide production.
-
-[Explore the repository →](https://github.com/Rolaand-Jayz/MY-PLAITHROUGH)
-
 ## How I work
 
 - Human-defined goals, requirements, scope, and final judgment
