@@ -10,25 +10,25 @@ My strongest work is not only the software I built. It is the progression in how
 
 ### [Temporal Forge Player](https://github.com/Rolaand-Jayz/temporal_forge_player)
 
-Flagship research project adapting FSR-style temporal reconstruction concepts to ordinary decoded video. It is one decoded frame in and one reconstructed/upscaled displayed frame out—not frame interpolation or frame generation. The project investigates which temporal signals can be recovered from finished video, which must be synthesized, and which cannot be trusted.
+Flagship experimental R&D adapting **AMD FSR 4.1-style temporal reconstruction/upscaling to ordinary decoded video** while preserving the original frame cadence. The project investigates which renderer-derived temporal signals can be recovered from finished video, which must be synthesized, which cannot be trusted, and which inputs actually change reconstruction behavior.
 
 [Explore the repository →](https://github.com/Rolaand-Jayz/temporal_forge_player)
 
 ### [AMD-VE](https://github.com/Rolaand-Jayz/AMD-VE)
 
-Linux-first, AMD-first video-enhancement application built around C++, ROCm, MiGraphX, HIP, Vulkan, and FFmpeg. The project exposed performance and integration problems in the underlying inference stack, leading to custom MiGraphX investigation, GPU-side optimization, benchmarking, upstream contributions, and operational integration.
+AMD-first Linux AI video-enhancement application built around C++, ROCm, MiGraphX, HIP, Vulkan, and FFmpeg. Integration and performance limits in the underlying inference stack led to measured MiGraphX GPU optimizations, benchmarking, four current upstream ROCm pull requests, and integration of the resulting work back into the application.
 
 [Explore the repository →](https://github.com/Rolaand-Jayz/AMD-VE)
 
 ### [FSR 4.1 Reverse Engineering](https://github.com/Rolaand-Jayz/RE-of-FSR-4.1.0-Upscaling)
 
-Evidence-driven static analysis of FSR 4.1 temporal-upscaler binaries: shader and weight extraction, dispatch and resource-structure analysis, reproducible tooling, and explicit boundaries between static reproduction, inference, and runtime facts not observed.
+Evidence-driven reverse engineering of AMD FSR 4.1’s neural temporal upscaler: shader and weight extraction, dispatch and resource-structure analysis, reproducible tooling, strict claim verification, and explicit boundaries between measured facts, inference, and behavior not directly observed.
 
 [Explore the repository →](https://github.com/Rolaand-Jayz/RE-of-FSR-4.1.0-Upscaling)
 
 ### [MY PLAITHROUGH](https://github.com/Rolaand-Jayz/MY-PLAITHROUGH)
 
-An AI-assisted guide application exploring LLM interaction, evidence/source management, workflow and session design, local/hosted integration, and human-in-the-loop product architecture.
+Local-first AI application combining ChatGPT interaction, persistent evidence-backed guide state, bounded hosted integration, source management, workflow/session design, and human-controlled guide production.
 
 [Explore the repository →](https://github.com/Rolaand-Jayz/MY-PLAITHROUGH)
 
@@ -48,5 +48,7 @@ AI assistance expands the range of problems I can attack. It does not replace re
 Enterprise IT/service-desk troubleshooting, Linux and hardware, cloud infrastructure, C++, JavaScript/Node, Python, GPU/video systems, technical research, and self-directed software engineering.
 
 Certifications: CompTIA A+, Microsoft Azure Fundamentals (AZ-900), Microsoft Azure AI Fundamentals (AI-900), and Linux Essentials.
- 
-[GitHub](https://github.com/Rolaand-Jayz)
+
+## Currently seeking
+
+Open to entry-level AI automation, agentic systems, technical R&D, systems integration, and advanced technical-support opportunities where rigorous AI-assisted problem solving is an advantage.
