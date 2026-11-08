@@ -1,48 +1,49 @@
 # Rolaand Jayz
+**Jeffrey Orr Jr. | Software QA, Technical Investigation & Linux/Video Engineering**
 
-## AI Automation Engineer · Technical R&D · Systems Integration
+I investigate what software actually does, not just what it is supposed to do. My background combines enterprise IT support with independent software engineering and rigorous test work: reproducing failures, reading code and logs, isolating variables, challenging apparently successful results, and documenting findings so someone else can verify them.
 
-I’m a self-directed technical problem solver with an enterprise IT service-desk background. I use Linux, software, experimentation, research, and deliberately structured AI-assisted workflows to investigate problems that cross application, infrastructure, GPU, video, and agentic-system boundaries.
+My main areas are **manual and exploratory testing, evidence-based regression checks, C++/Python investigation, Linux, GPU/video pipelines, and AI-assisted engineering with independent validation**. I use AI tools to expand the scope of what I can work on, while retaining responsibility for requirements, technical decisions, testing, and acceptance.
 
-My strongest work is not only the software I built. It is the progression in how I solve difficult problems: clear goals, explicit evidence, model specialization, independent evaluation, adversarial review, falsifiable experiments, remediation loops, and human responsibility for judgment and verification.
+## Selected public work
 
-## Featured work
+### [Temporal Forge Player](https://github.com/Rolaand-Jayz/Temporal-Forge-Player) — closed FSR-era video-reconstruction research
 
-### [Temporal Forge Player](https://github.com/Rolaand-Jayz/Temporal-Forge-Player)
+A Linux C++/Vulkan/FFmpeg research project investigating how AMD FSR 4.1-style temporal reconstruction behaves on ordinary decoded video. The most relevant work is the **test methodology**: controlled experiments, source-cadence requirements, baseline comparisons, multi-frame evaluation, negative findings, and review of automated quality gates.
 
-Flagship experimental R&D adapting **AMD FSR 4.1-style temporal reconstruction/upscaling to ordinary decoded video** while preserving the original frame cadence. The project investigates which renderer-derived temporal signals can be recovered from finished video, which must be synthesized, which cannot be trusted, and which inputs actually change reconstruction behavior.
+- Reopened a previously passing quality gate after visible lattice corruption appeared; retained and reclassified invalidated results.
+- Used evidence from repeated experiments to close the FSR-centered approach in **September 2026** rather than claim a quality advantage that was not established.
+- [Read the closure and evidence ledger](https://github.com/Rolaand-Jayz/Temporal-Forge-Player/blob/main/docs/closure/CLAIM_EVIDENCE_LEDGER.md).
 
-[Explore the repository →](https://github.com/Rolaand-Jayz/Temporal-Forge-Player)
+### [AMD Video Enhancer (AMD-VE)](https://github.com/Rolaand-Jayz/AMD-VE) — Linux-first AMD video application
 
-### [AMD-VE](https://github.com/Rolaand-Jayz/AMD-VE)
+Experimental C++ application integrating FFmpeg, ROCm/HIP, MiGraphX, and Vulkan. Testing went beyond the application's UI into runtime dependencies, model execution, GPU behavior, benchmarking, fallback paths, and reproducible release documentation.
 
-AMD-first Linux AI video-enhancement application built around C++, ROCm, MiGraphX, HIP, Vulkan, and FFmpeg. Integration and performance limits in the underlying inference stack led to measured MiGraphX GPU optimizations, benchmarking, four current upstream ROCm pull requests, and integration of the resulting work back into the application.
+The investigations prompted **four submitted upstream MiGraphX optimization pull requests**: [#4707](https://github.com/ROCm/AMDMIGraphX/pull/4707), [#4708](https://github.com/ROCm/AMDMIGraphX/pull/4708), [#4709](https://github.com/ROCm/AMDMIGraphX/pull/4709), and [#4710](https://github.com/ROCm/AMDMIGraphX/pull/4710). Benchmarks are workload-specific; this is not a claim of universal speedup or upstream acceptance.
 
-[Explore the repository →](https://github.com/Rolaand-Jayz/AMD-VE)
+### [FSR 4.1 Static Reverse Engineering](https://github.com/Rolaand-Jayz/RE-of-FSR-4.1.0-Upscaling) — reproducible research
 
-### [FSR 4.1 Reverse Engineering](https://github.com/Rolaand-Jayz/RE-of-FSR-4.1.0-Upscaling)
+Analysis of shader passes, binary resources, dispatch structures, neural-weight data, and resource bindings using Python, C, disassembly, and comparison tools. The repository deliberately distinguishes **verified static facts, inferred behavior, and runtime behavior not yet observed**.
 
-Evidence-driven reverse engineering of AMD FSR 4.1’s neural temporal upscaler: shader and weight extraction, dispatch and resource-structure analysis, reproducible tooling, strict claim verification, and explicit boundaries between measured facts, inference, and behavior not directly observed.
+## Current private work
 
-[Explore the repository →](https://github.com/Rolaand-Jayz/RE-of-FSR-4.1.0-Upscaling)
+**ANVIL / FORGE:** ongoing from-scratch video-reconstruction R&D informed by the preceding research. The active repository is private; the public Temporal Forge repository remains available as an auditable record of the earlier experiment and the decision to pivot.
 
-## How I work
+## How I approach quality
 
-- Human-defined goals, requirements, scope, and final judgment
-- Digital-intelligence specialization for orchestration, implementation, evaluation, and research
-- Independent review and adversarial challenge rather than trusting one model's first answer
-- Measured evidence, provenance, uncertainty labels, and reproducible conditions
-- Remediation loops, regression checks, and escalation only when the problem justifies it
-- Preservation of negative results and failed experiments when they explain system behavior
+- **Start from observable behavior:** expected result, actual result, environment, reproduction steps, and evidence.
+- **Test the affected scope:** inspect changes and dependencies; use normal, edge, negative, fallback, and regression scenarios as appropriate.
+- **Isolate causes:** controlled comparisons, instrumentation, system logs, benchmarks, and cross-platform checks.
+- **Verify independently:** visual inspection can overturn an automated PASS; compiling is not the same as fixing.
+- **Document uncertainty:** retain failed tests, caveats, test conditions, and enough context for others to reproduce the result.
 
-AI assistance expands the range of problems I can attack. It does not replace responsibility for understanding, directing, testing, or defending the result.
+## Professional background & tools
 
-## Background
+- **Enterprise support:** Service Desk Analyst, Alpha Net Consulting LLC, through Capgemini for Progressive Insurance (April 2025–July 2026); Microsoft 365, application/hardware/access issues, BMC Remedy, incident resolution and escalation.
+- **Customer operations:** Former ResultsCX team supervisor; led and coached teams of approximately 15–20+ agents.
+- **Technical toolkit:** C++, Python scripting, JavaScript/Node familiarity, Bash, Git/GitHub, VS Code, Arch/CachyOS, Ubuntu Server, Windows, FFmpeg, Vulkan, ROCm/HIP, MiGraphX, Oracle Cloud, networking, and cross-browser diagnostics.
+- **Certifications:** CompTIA A+, Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900), Linux Essentials.
 
-Enterprise IT/service-desk troubleshooting, Linux and hardware, cloud infrastructure, C++, JavaScript/Node, Python, GPU/video systems, technical research, and self-directed software engineering.
+Interested in **manual/software QA, technical validation, video/application reliability, systems integration, and engineering roles where troubleshooting and empirical reasoning matter**.
 
-Certifications: CompTIA A+, Microsoft Azure Fundamentals (AZ-900), Microsoft Azure AI Fundamentals (AI-900), and Linux Essentials.
-
-## Currently seeking
-
-Open to entry-level AI automation, agentic systems, technical R&D, systems integration, and advanced technical-support opportunities where rigorous AI-assisted problem solving is an advantage.
+[LinkedIn — Jeffrey Orr Jr.](https://www.linkedin.com/in/jeffreyorrjr)
