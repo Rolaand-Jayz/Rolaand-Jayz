@@ -5,6 +5,9 @@ I investigate what software actually does, not just what it is supposed to do. M
 
 My main areas are **manual and exploratory testing, evidence-based regression checks, C++/Python investigation, Linux, GPU/video pipelines, and AI-assisted engineering with independent validation**. I use AI tools to expand the scope of what I can work on, while retaining responsibility for requirements, technical decisions, testing, and acceptance.
 
+
+**[QA case studies and sample test design →](QA_TEST_EVIDENCE.md)** — public evidence of defect investigation, failed hypotheses, test scope, and repeatable checks.
+
 ## Selected public work
 
 ### [Temporal Forge Player](https://github.com/Rolaand-Jayz/Temporal-Forge-Player) — closed FSR-era video-reconstruction research
