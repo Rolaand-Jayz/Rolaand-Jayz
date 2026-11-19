@@ -1,49 +1,49 @@
 # Rolaand Jayz
-**Rolaand Jayz | Software QA, Technical Investigation & Linux/Video Engineering**
+**Rolaand Jayz | IT Support & Troubleshooting · AI-Directed Development, QA & Validation · Linux**
 
-I investigate what software actually does, not just what it is supposed to do. My background combines enterprise IT support with independent software engineering and rigorous test work: reproducing failures, reading code and logs, isolating variables, challenging apparently successful results, and documenting findings so someone else can verify them.
+I investigate what software actually does, not just what it is supposed to do. My background combines enterprise IT support with independent, AI-directed software R&D and rigorous test work: reproducing failures, reading logs, isolating variables, challenging apparently successful results, and documenting findings so someone else can verify them.
 
-My main areas are **manual and exploratory testing, evidence-based regression checks, C++/Python investigation, Linux, GPU/video pipelines, and AI-assisted engineering with independent validation**. I use AI tools to expand the scope of what I can work on, while retaining responsibility for requirements, technical decisions, testing, and acceptance.
-
+**How I build:** I am not a trained programmer, and I don't write code by hand. My projects are built by AI coding agents (Claude Code, ChatGPT/Codex, GitHub Copilot) working under my direction. My part is the part that decides whether the work is any good: defining the objective and requirements, choosing between technical approaches, structuring the agents' context, testing the results, rejecting work that only *looks* finished, and deciding what ships. Every project below is evidence of that process — including the ones that ended in a documented "no."
 
 **[QA case studies and sample test design →](QA_TEST_EVIDENCE.md)** — public evidence of defect investigation, failed hypotheses, test scope, and repeatable checks.
 
 ## Selected public work
 
-### [Temporal Forge Player](https://github.com/Rolaand-Jayz/Temporal-Forge-Player) — closed FSR-era video-reconstruction research
+### [Promptitect](https://github.com/Rolaand-Jayz/RJW-Redux/blob/main/design/PROMPTITECT_ENGINEERING_SPEC_2026-09-26.md): how I direct AI agents
+The system behind everything else here. It started in 2025 as a family of specialist GPTs that turn an idea into an executable specification and route the work, and it is now growing into my own agent harness. It's built around the habits I've used since March 2025: self-critique on every response, independent evaluation, and audits that don't close until three consecutive clean passes. Core rule: *a worker saying it is finished is not evidence that the objective was achieved.*
 
-A Linux C++/Vulkan/FFmpeg research project investigating how AMD FSR 4.1-style temporal reconstruction behaves on ordinary decoded video. The most relevant work is the **test methodology**: controlled experiments, source-cadence requirements, baseline comparisons, multi-frame evaluation, negative findings, and review of automated quality gates.
+### [Temporal Forge Player](https://github.com/Rolaand-Jayz/Temporal-Forge-Player) — closed video-reconstruction research
+A Linux C++/Vulkan/FFmpeg research project testing how AMD FSR 4.1-style temporal reconstruction behaves on ordinary decoded video. The most relevant part is the **test methodology**: controlled experiments, source-cadence requirements, baseline comparisons, multi-frame evaluation, negative findings, and review of automated quality gates.
 
 - Reopened a previously passing quality gate after visible lattice corruption appeared; retained and reclassified invalidated results.
-- Used evidence from repeated experiments to close the FSR-centered approach in **September 2026** rather than claim a quality advantage that was not established.
-- [Read the closure and evidence ledger](https://github.com/Rolaand-Jayz/Temporal-Forge-Player/blob/main/docs/closure/CLAIM_EVIDENCE_LEDGER.md).
+- Closed the FSR-centered approach in **September 2026** on the evidence, rather than claim a quality advantage that was not established. → [Closure and evidence ledger](https://github.com/Rolaand-Jayz/Temporal-Forge-Player/blob/main/docs/closure/CLAIM_EVIDENCE_LEDGER.md)
+- Successor research continues in [New Forge](https://github.com/Rolaand-Jayz/New-Forge) (public, decision stage) and ANVIL (private).
 
 ### [AMD Video Enhancer (AMD-VE)](https://github.com/Rolaand-Jayz/AMD-VE) — Linux-first AMD video application
+Experimental C++ application integrating FFmpeg, ROCm/HIP, MiGraphX, and Vulkan. Testing went beyond the UI into runtime dependencies, model execution, GPU behavior, benchmarking, fallback paths, and reproducible release documentation.
 
-Experimental C++ application integrating FFmpeg, ROCm/HIP, MiGraphX, and Vulkan. Testing went beyond the application's UI into runtime dependencies, model execution, GPU behavior, benchmarking, fallback paths, and reproducible release documentation.
-
-The investigations prompted **four submitted upstream MiGraphX optimization pull requests**: [#4707](https://github.com/ROCm/AMDMIGraphX/pull/4707), [#4708](https://github.com/ROCm/AMDMIGraphX/pull/4708), [#4709](https://github.com/ROCm/AMDMIGraphX/pull/4709), and [#4710](https://github.com/ROCm/AMDMIGraphX/pull/4710). Benchmarks are workload-specific; this is not a claim of universal speedup or upstream acceptance.
+The investigations produced **four upstream MiGraphX optimization pull requests** to AMD's ROCm project — [#4707](https://github.com/ROCm/AMDMIGraphX/pull/4707), [#4708](https://github.com/ROCm/AMDMIGraphX/pull/4708), [#4709](https://github.com/ROCm/AMDMIGraphX/pull/4709), [#4710](https://github.com/ROCm/AMDMIGraphX/pull/4710) — one approved by a maintainer, the others in review. Benchmarks are workload-specific; this is not a claim of universal speedup or merged code.
 
 ### [FSR 4.1 Static Reverse Engineering](https://github.com/Rolaand-Jayz/RE-of-FSR-4.1.0-Upscaling) — reproducible research
-
-Analysis of shader passes, binary resources, dispatch structures, neural-weight data, and resource bindings using Python, C, disassembly, and comparison tools. The repository deliberately distinguishes **verified static facts, inferred behavior, and runtime behavior not yet observed**.
-
-## Current private work
-
-**ANVIL / FORGE:** ongoing from-scratch video-reconstruction R&D informed by the preceding research. The active repository is private; the public Temporal Forge repository remains available as an auditable record of the earlier experiment and the decision to pivot.
+Analysis of shader passes, binary resources, dispatch structures, neural-weight data, and resource bindings with disassembly and comparison tooling. The repository deliberately separates **verified static facts, inferred behavior, and runtime behavior not yet observed**.
 
 ## How I approach quality
 
-- **Start from observable behavior:** expected result, actual result, environment, reproduction steps, and evidence.
-- **Test the affected scope:** inspect changes and dependencies; use normal, edge, negative, fallback, and regression scenarios as appropriate.
-- **Isolate causes:** controlled comparisons, instrumentation, system logs, benchmarks, and cross-platform checks.
-- **Verify independently:** visual inspection can overturn an automated PASS; compiling is not the same as fixing.
-- **Document uncertainty:** retain failed tests, caveats, test conditions, and enough context for others to reproduce the result.
+- **Start from observable behavior:** expected result, actual result, environment, reproduction steps, evidence.
+- **Test the affected scope:** normal, edge, negative, fallback, and regression scenarios as appropriate.
+- **Isolate causes:** controlled comparisons, instrumentation, system logs, benchmarks, cross-platform checks.
+- **Verify independently:** visual inspection can overturn an automated PASS; compiling is not the same as fixing; an agent reporting "done" is not the same as done.
+- **Document uncertainty:** keep failed tests, caveats, test conditions, and enough context for others to reproduce the result.
 
-## Professional background & tools
+## Professional background
 
-- **Technical toolkit:** C++, Python scripting, JavaScript/Node familiarity, Bash, Git/GitHub, VS Code, Arch/CachyOS, Ubuntu Server, Windows, FFmpeg, Vulkan, ROCm/HIP, MiGraphX, Oracle Cloud, networking, and cross-browser diagnostics.
-- **Certifications:** CompTIA A+, Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900), Linux Essentials.
+- **Certifications:** CompTIA A+, Microsoft Azure Fundamentals (AZ-900), Azure AI Fundamentals (AI-900), Linux Essentials. IT Security & Administration program, MyComputerCareer (2024).
 
-Interested in **manual/software QA, technical validation, video/application reliability, systems integration, and engineering roles where troubleshooting and empirical reasoning matter**.
+## Tools
+
+- **I use directly:** Linux (Arch/CachyOS, Ubuntu Server), Windows, Git/GitHub, VS Code, the command line, FFmpeg, BMC Remedy, Microsoft 365, Oracle Cloud, networking and cross-browser diagnostics.
+- **AI development:** Claude Code, ChatGPT / Codex, GitHub Copilot — multi-agent workflows, context curation, independent evaluation.
+- **Stacks my projects use (built by agents under my direction):** C++, Python, Vulkan, ROCm/HIP, MiGraphX, Qt/QML.
+
+Open to **IT support and service desk, application and product support, software QA and technical validation, AI red teaming and model evaluation, and other roles where troubleshooting and evidence-based reasoning matter.** Remote.
 
