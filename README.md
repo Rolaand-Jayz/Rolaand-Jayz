@@ -17,7 +17,10 @@ A Linux C++/Vulkan/FFmpeg research project testing how AMD FSR 4.1-style tempora
 
 - Reopened a previously passing quality gate after visible lattice corruption appeared; retained and reclassified invalidated results.
 - Closed the FSR-centered approach in **September 2026** on the evidence, rather than claim a quality advantage that was not established. → [Closure and evidence ledger](https://github.com/Rolaand-Jayz/Temporal-Forge-Player/blob/main/docs/closure/CLAIM_EVIDENCE_LEDGER.md)
-- Successor research continues in [New Forge](https://github.com/Rolaand-Jayz/New-Forge) (public, decision stage) and ANVIL (private).
+- Successor work continues in [New Forge](https://github.com/Rolaand-Jayz/New-Forge) (public) and ANVIL (private).
+
+### [New Forge / FORGE](https://github.com/Rolaand-Jayz/New-Forge) — the successor, with first results
+After closing the FSR approach, I commissioned a new reconstruction stage, FORGE: a lanczos3 base plus a small correction network and an evidence-gated temporal path, with its pass/fail gates written down before any tuning. On scenes held out from tuning it passes its quality gate: **+0.585 dB on clean input and +0.414 dB on compressed input over lanczos3**. The same record states what still fails: frame-to-frame stability on noisy input, and 4K60 playback is not yet measured. → [Results record](https://github.com/Rolaand-Jayz/New-Forge/blob/main/docs/results/2026-11-17-forge-protected-scene-confirm.md)
 
 ### [AMD Video Enhancer (AMD-VE)](https://github.com/Rolaand-Jayz/AMD-VE) — Linux-first AMD video application
 Experimental C++ application integrating FFmpeg, ROCm/HIP, MiGraphX, and Vulkan. Testing went beyond the UI into runtime dependencies, model execution, GPU behavior, benchmarking, fallback paths, and reproducible release documentation.
