@@ -9,8 +9,10 @@ I investigate what software actually does, not just what it is supposed to do. M
 
 ## Selected public work
 
-### [Promptitect](https://github.com/Rolaand-Jayz/RJW-Redux/blob/main/design/PROMPTITECT_ENGINEERING_SPEC_2026-09-26.md): how I direct AI agents
-The system behind everything else here. It started in 2025 as a family of specialist GPTs that turn an idea into an executable specification and route the work, and it is now growing into my own agent harness. It's built around the habits I've used since March 2025: self-critique on every response, independent evaluation, and audits that don't close until three consecutive clean passes. Core rule: *a worker saying it is finished is not evidence that the objective was achieved.*
+### [RJW Redux](https://github.com/Rolaand-Jayz/RJW-Redux) and [Promptitect](https://github.com/Rolaand-Jayz/RJW-Redux/blob/main/design/PROMPTITECT_ENGINEERING_SPEC_2026-09-26.md): how I direct AI agents
+RJW Redux is the public record of my method for directing AI agents. It grew out of RJW-IDD (started September 2025) by finding where the method broke on real projects and changing it. It now has separate components: context curation (CCE), Promptitect, an independent Evaluator, and an adversarial Tribunal. The dated history is kept, so the evolution can be checked instead of taken on trust.
+
+Promptitect is the system behind everything else here. It started in 2025 as a family of specialist GPTs that turn an idea into an executable specification and route the work, and it is now growing into my own agent harness. It's built around the habits I've used since March 2025: self-critique on every response, independent evaluation, and audits that don't close until three consecutive clean passes. Core rule: *a worker saying it is finished is not evidence that the objective was achieved.*
 
 ### [Temporal Forge Player](https://github.com/Rolaand-Jayz/Temporal-Forge-Player) — closed video-reconstruction research
 A Linux C++/Vulkan/FFmpeg research project testing how AMD FSR 4.1-style temporal reconstruction behaves on ordinary decoded video. The most relevant part is the **test methodology**: controlled experiments, source-cadence requirements, baseline comparisons, multi-frame evaluation, negative findings, and review of automated quality gates.
@@ -20,7 +22,9 @@ A Linux C++/Vulkan/FFmpeg research project testing how AMD FSR 4.1-style tempora
 - Successor work continues in [New Forge](https://github.com/Rolaand-Jayz/New-Forge) (public) and ANVIL (private).
 
 ### [New Forge / FORGE](https://github.com/Rolaand-Jayz/New-Forge) — the successor, with first results
-After closing the FSR approach, I commissioned a new reconstruction stage, FORGE: a lanczos3 base plus a small correction network and an evidence-gated temporal path, with its pass/fail gates written down before any tuning. On scenes held out from tuning it passes its quality gate: **+0.585 dB on clean input and +0.414 dB on compressed input over lanczos3**. The same record states what still fails: frame-to-frame stability on noisy input, and 4K60 playback is not yet measured. → [Results record](https://github.com/Rolaand-Jayz/New-Forge/blob/main/docs/results/2026-11-17-forge-protected-scene-confirm.md)
+After closing the FSR approach, I commissioned a new reconstruction stage, FORGE: a lanczos3 base plus a small correction network and an evidence-gated temporal path, with its pass/fail gates written down before any tuning. On scenes held out from tuning it passes its quality gate: **+0.585 dB on clean input and +0.414 dB on compressed (CRF 23) input over lanczos3**. On noisy input it measures +4.858 dB, but that gain is mostly denoising, not recovered detail. The whole stage takes 9.77 ms per 4K frame on an RX 7900 GRE. The same record states what still fails: frame-to-frame stability on noisy input. Real 4K60 playback is not yet measured.
+
+- The FORGE code, the hand-built weights, and the gate scripts that produced these numbers are public, so the results can be checked against the code. → [Code](https://github.com/Rolaand-Jayz/New-Forge/tree/main/implementations/forge) · [Results record](https://github.com/Rolaand-Jayz/New-Forge/blob/main/docs/results/2026-11-17-forge-protected-scene-confirm.md)
 
 ### [AMD Video Enhancer (AMD-VE)](https://github.com/Rolaand-Jayz/AMD-VE) — Linux-first AMD video application
 Experimental C++ application integrating FFmpeg, ROCm/HIP, MiGraphX, and Vulkan. Testing went beyond the UI into runtime dependencies, model execution, GPU behavior, benchmarking, fallback paths, and reproducible release documentation.
